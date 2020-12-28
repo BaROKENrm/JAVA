@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+
+
+<!--servlet标签给tomcat配置Servlet程序 -->
+    <servlet>
+<!--给程序起别名 一般是类名-->
+        <servlet-name>DemoServlet</servlet-name>
+<!--是程序的全类名-->
+        <servlet-class>DemoServlet</servlet-class>
+    </servlet>
+
+
+<!--给Servlet程序配置访问地址-->
+    <servlet-mapping>
+<!--告诉服务器当前配置的地址是给哪个Servlet程序使用-->
+        <servlet-name>DemoServlet</servlet-name>
+<!--配置访问地址-->
+<!--/  表示在服务器解析的时候，表示地址为http://ip:端口号/工程路径-->
+<!--/hello 表示地址为http://ip:端口号/工程路径/hello -->
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
